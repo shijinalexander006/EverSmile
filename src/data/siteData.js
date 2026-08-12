@@ -21,9 +21,9 @@
 
 export const clinic = {
   name: "EverSmile Dental Clinic",
-  tagline: "Creating Health , Beautiful Smiles for Every Family",
-  logo: "/logo-placeholder.svg",// PLACEHOLDER: replace with real clinic logo
-  interiorPhoto: "/images/clinic-interior.jpg",
+  tagline: "Creating Healthy, Beautiful Smiles for Every Family",
+  logo: "/logo-placeholder.svg",
+  interiorPhoto: "/images/clinic-interior.png",
   address: {
     line1: "556, 8th Main Road, HMT Layout 2nd Block",
     line2: "Vidyaranyapura, Bengaluru, Karnataka 560097",
@@ -31,16 +31,16 @@ export const clinic = {
   },
   phone: "+91 80884 88718",
   phoneHref: "tel:+918088488718",
-  whatsapp: "+91 80884 88718", // PLACEHOLDER: confirm dedicated WhatsApp number
+  whatsapp: "+91 80884 88718",
   whatsappHref: "https://wa.me/918088488718",
-  email: "info@eversmiledental.in", // PLACEHOLDER
+  email: "info@eversmiledental.in",
   rating: 5.0,
   reviewCount: 20,
   googleMapsEmbed:
     "https://www.google.com/maps?q=556,+8th+Main+Road,+HMT+Layout+2nd+Block,+Vidyaranyapura,+Bengaluru,+Karnataka+560097&output=embed",
   googleMapsLink:
     "https://www.google.com/maps/search/?api=1&query=556+8th+Main+Road+HMT+Layout+2nd+Block+Vidyaranyapura+Bengaluru+Karnataka+560097",
-  googleBusinessProfile: "#", // PLACEHOLDER: link to Google Business Profile
+  googleBusinessProfile: "#",
   workingHours: [
     { day: "Monday", hours: "4:30 PM – 8:30 PM" },
     { day: "Tuesday", hours: "4:30 PM – 8:30 PM" },
@@ -50,15 +50,15 @@ export const clinic = {
     { day: "Saturday", hours: "4:30 PM – 8:30 PM" },
     { day: "Sunday", hours: "Closed" },
   ],
-  emergencyContact: "+91 80884 88718", // PLACEHOLDER: dedicated emergency line
-  languagesSpoken: ["English", "Hindi", "Kannada", "Telugu"], // PLACEHOLDER
-  parkingInfo: "Two-wheeler & car parking available near the clinic premises.", // PLACEHOLDER
-  insurance: "Cashless & reimbursement claims accepted with select insurance providers. Please call to confirm your policy.", // PLACEHOLDER
+  emergencyContact: "+91 80884 88718",
+  languagesSpoken: ["English", "Hindi", "Kannada", "Telugu"],
+  parkingInfo: "Two-wheeler & car parking available near the clinic premises.",
+  insurance: "Cashless & reimbursement claims accepted with select insurance providers. Please call to confirm your policy.",
 };
 
 export const socialLinks = {
-  instagram: "#", // PLACEHOLDER
-  facebook: "#", // PLACEHOLDER
+  instagram: "#",
+  facebook: "#",
   google: clinic.googleBusinessProfile,
   whatsapp: clinic.whatsappHref,
 };
@@ -94,10 +94,6 @@ export const about = {
     "To become one of the most trusted dental clinics in Bangalore — known for compassionate care, clinical excellence, and smiles that last a lifetime.",
 };
 
-/**
- * SERVICES
- * icon refers to a lucide-react icon name (see components/ServiceCard.jsx)
- */
 export const services = [
   {
     slug: "general-dentistry",
@@ -267,16 +263,16 @@ export const treatmentProcess = [
 ];
 
 export const galleryCategories = [
-  { id: "whitening", name: "Teeth Whitening", images: [] }, // PLACEHOLDER: add before/after images
-  { id: "smile-makeover", name: "Smile Makeover", images: [] }, // PLACEHOLDER
-  { id: "implants", name: "Dental Implants", images: [] }, // PLACEHOLDER
-  { id: "braces", name: "Braces", images: [] }, // PLACEHOLDER
-  { id: "veneers", name: "Veneers", images: [] }, // PLACEHOLDER
+  { id: "whitening", name: "Teeth Whitening", images: [] },
+  { id: "smile-makeover", name: "Smile Makeover", images: [] },
+  { id: "implants", name: "Dental Implants", images: [] },
+  { id: "braces", name: "Braces", images: [] },
+  { id: "veneers", name: "Veneers", images: [] },
 ];
 
 export const testimonials = [
   {
-    name: "Anita R.", // PLACEHOLDER: real reviewer name/consent
+    name: "Anita R.",
     rating: 5,
     text: "Very professional doctor and friendly staff. Explained everything clearly before starting treatment.",
     source: "Google Review",
@@ -302,15 +298,13 @@ export const testimonials = [
 ];
 
 export const doctor = {
-  name: "Dr. [Doctor Name]", // PLACEHOLDER
-  qualification: "BDS, MDS [Specialization]", // PLACEHOLDER
-  experience: "[X]+ Years of Experience", // PLACEHOLDER
-  specializations: ["General Dentistry", "Cosmetic Dentistry", "Root Canal Treatment"], // PLACEHOLDER
-  registrationNumber: "KDC/[Registration Number]", // PLACEHOLDER
-  photo:"/images/dental-photo.png", // PLACEHOLDER: professional headshot
-  bio:
-    "Full biography to be added — education, career highlights, and treatment philosophy.", // PLACEHOLDER
-};
+  name: "Dr. Jincy Samuel",
+  qualification: "Dental surgeon",
+  experience: "20+ Years of Experience",
+  specializations: ["General Dentistry", "Cosmetic Dentistry", "Root Canal Treatment"],
+  photo: "/images/dental-photo.png",
+  professionalPhoto: "/images/doctor-photo2.jpg",
+  };
 
 export const technology = [
   { name: "Digital X-Ray", icon: "ScanLine", description: "Fast, low-radiation imaging for accurate diagnosis." },

@@ -11,7 +11,6 @@ import TechCard from "../components/TechCard.jsx";
 import DoctorCard from "../components/DoctorCard.jsx";
 import FAQAccordion from "../components/FAQAccordion.jsx";
 import CTABanner from "../components/CTABanner.jsx";
-import ImagePlaceholder from "../components/ImagePlaceholder.jsx";
 import {
   services,
   whyChooseUs,
@@ -19,6 +18,7 @@ import {
   technology,
   faqs,
   about,
+  clinic,
 } from "../data/siteData.js";
 
 export default function Home() {
@@ -37,7 +37,11 @@ export default function Home() {
       {/* About preview */}
       <section className="section-y">
         <div className="container-x grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <ImagePlaceholder label="Clinic interior photo" className="aspect-[4/3] w-full" />
+          <img
+            src={clinic.interiorPhoto}
+            alt="EverSmile Dental Clinic interior"
+            className="aspect-[4/3] w-full rounded-2xl object-cover shadow-card"
+          />
           <div>
             <SectionHeading eyebrow="About EverSmile" title="Trusted Dental Care in Vidyaranyapura" center={false} />
             <p className="text-navy-600/90">{about.intro}</p>

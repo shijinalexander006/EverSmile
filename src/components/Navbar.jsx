@@ -55,9 +55,7 @@ export default function Navbar() {
 
       <div className="container-x flex items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-heading text-lg font-bold text-navy-900">
-            ES
-          </span>
+          <img src="/images/logo.png" alt="EverSmile Logo" className="h-12 w-12 object-cover bg-navy-800 rounded-full p-1" />
           <span className="font-heading text-lg font-bold text-white sm:text-xl">
             EverSmile <span className="hidden text-gold-400 sm:inline">Dental Clinic</span>
           </span>

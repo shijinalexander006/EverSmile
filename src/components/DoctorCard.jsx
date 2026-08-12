@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase, Award, BadgeCheck } from "lucide-react";
 import { doctor } from "../data/siteData.js";
-import ImagePlaceholder from "./ImagePlaceholder.jsx";
 
 export default function DoctorCard() {
   return (
@@ -12,7 +11,11 @@ export default function DoctorCard() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5 }}
       >
-        <ImagePlaceholder label="Doctor professional photo" className="aspect-[3/4] w-full max-w-sm mx-auto" />
+        <img
+          src={doctor.professionalPhoto}
+          alt={`${doctor.name}, ${doctor.qualification}`}
+          className="aspect-[3/4] w-full max-w-sm mx-auto rounded-2xl object-cover shadow-soft"
+        />
       </motion.div>
 
       <motion.div
@@ -30,19 +33,7 @@ export default function DoctorCard() {
             <Briefcase className="h-5 w-5 flex-none text-navy-500" />
             {doctor.experience}
           </li>
-          <li className="flex items-start gap-3">
-            <GraduationCap className="h-5 w-5 flex-none text-navy-500" />
-            <span>Specializations: {doctor.specializations.join(", ")}</span>
-          </li>
-          <li className="flex items-center gap-3">
-            <BadgeCheck className="h-5 w-5 flex-none text-navy-500" />
-            Registration No: {doctor.registrationNumber}
-          </li>
-          <li className="flex items-center gap-3">
-            <Award className="h-5 w-5 flex-none text-navy-500" />
-            Awards & certifications — to be added
-          </li>
-        </ul>
+          </ul>
       </motion.div>
     </div>
   );
