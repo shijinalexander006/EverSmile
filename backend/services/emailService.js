@@ -1,8 +1,11 @@
 import nodemailer from "nodemailer";
 
-// Configure email transporter (using Gmail)
+// Configure email transporter (Gmail over IPv4 — Render's free tier can't reach Gmail via IPv6)
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
+  family: 4,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -40,8 +43,7 @@ export async function sendAdminNotification(appointmentData) {
   }
 }
 
-// Dummy function (not used, but imported)
-export async function sendPatientConfirmation(appointmentData) {
-  // Only admin gets email, patient confirmation disabled
+// Not used — only admin receives email
+export async function sendPatientConfirmation() {
   return Promise.resolve();
 }

@@ -11,15 +11,15 @@ router.post("/", async (req, res) => {
     if (!fullName || !phone || !treatment || !date || !time) {
       return res.status(400).json({ error: "Missing required fields." });
     }
-    
+
     console.log("📝 Appointment received:", fullName);
     const appointment = await Appointment.create(req.body);
     console.log("✅ Appointment saved to DB");
 
-    // Send email
-    console.log("📧 Sending email...");
-    await sendAdminNotification(appointment);
-    console.log("✅ Email sent");
+    // Send email in the background — never block or fail the response
+    sendAdminNotification(appointment).catch((err) =>
+      console.error("❌ Email failed (appointment still saved):", err.message)
+    );
 
     res.status(201).json(appointment);
   } catch (err) {
